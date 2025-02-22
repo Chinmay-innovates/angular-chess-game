@@ -1,0 +1,134 @@
+.chess-board {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+  width: 480px;
+  height: 480px;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+  /* border: 1px solid white; */
+  /* background-color: white; */
+}
+
+.game-over-message {
+  color: white;
+}
+
+.promotion-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(51, 51, 85, 0.6);
+}
+
+.promotion-dialog img {
+  height: 70px;
+  cursor: pointer;
+}
+
+.close-promotion-dialog {
+  font-size: 45px;
+  cursor: pointer;
+  color: white;
+}
+
+.dark {
+  background-color: #779556;
+}
+
+.light {
+  background-color: #ebecd0;
+}
+
+/*.dark {*/
+/*  background-color: #B58863; !* Soft brown *!*/
+/*}*/
+
+/*.light {*/
+/*  background-color: #F0D9B5; !* Warm beige *!*/
+/*}*/
+
+.piece {
+  width: 50px;
+}
+
+.selected-square {
+  background-color: rgb(185, 202, 67); /* Light green for dark squares */
+}
+
+.light.selected-square {
+  background-color: rgb(245, 246, 130); /* Yellow for light squares */
+}
+
+.safe-square {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(245, 246, 130);
+  border-radius: 50%;
+  z-index: 100;
+}
+
+.king-in-check {
+  box-shadow: inset rgb(179, 21, 0) 0px 0px 40px 0px,
+    inset rgb(163, 11, 0) 0px 0px 40px 0px,
+    inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.last-move {
+  background-color: rgb(185, 202, 67); /* lightgreen for dark squares */
+}
+
+.light.last-move {
+  background-color: rgb(245, 246, 130); /* yellow for light squares */
+}
+
+.promotion-square {
+  box-shadow: inset rgb(0, 98, 150) 0px 0px 40px 0px,
+    inset rgb(0, 98, 150) 0px 0px 40px 0px,
+    inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+}
+
+.flip-button {
+  background-color: rgba(243, 65, 0, 0.68);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flip-button:hover {
+  background-color: rgba(0, 102, 204, 0.8);
+}
+
+.flip-button:active {
+  background-color: rgba(0, 85, 170, 0.8);
+}
